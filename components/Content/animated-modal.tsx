@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, easeOut, motion } from "framer-motion";
 import React, {
   ReactNode,
   createContext,
@@ -50,7 +50,7 @@ export const ModalTrigger = ({
   return (
     <button
       className={cn(
-        "px-4 py-2 rounded-md text-black dark:text-white text-center relative overflow-hidden",
+        " rounded-md text-black dark:text-white text-center relative overflow-hidden",
         className
       )}
       onClick={() => setOpen(true)}
@@ -85,7 +85,6 @@ export const ModalBody = ({
       <AnimatePresence>
         {open && (
           <>
-            {/* Global Overlay */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -93,7 +92,6 @@ export const ModalBody = ({
               className="fixed inset-0 bg-black bg-opacity-60 z-50"
             ></motion.div>
   
-            {/* Modal Content */}
             <motion.div
               initial={{
                 opacity: 0,
@@ -109,24 +107,24 @@ export const ModalBody = ({
               <motion.div
                 ref={modalRef}
                 className={cn(
-                  "min-h-[50%] max-h-[90%] bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
+                  "h-[578px] w-[458px] rounded-sm relative z-50 flex flex-col flex-1 overflow-hidden",
                   className
                 )}
                 initial={{
                   opacity: 1,
-                  
                   y: 700,
                 }}
                 animate={{
                   opacity: 1,
-                  
                   y: 0,
                 }}
                 transition={{
-                  duration: 0.5
+                  duration: 0.5,
+                  delay: 0.1,
+                  ease: [.47,.17,0,.99]
                 }}
               >
-                <CloseIcon />
+                {/* <CloseIcon /> */}
                 {children}
               </motion.div>
             </motion.div>
@@ -145,7 +143,7 @@ export const ModalContent = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("flex flex-col flex-1 p-8 md:p-10", className)}>
+    <div className={cn("flex flex-col flex-1", className)}>
       {children}
     </div>
   );

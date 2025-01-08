@@ -5,6 +5,7 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./constants/index.ts"
   ],
   theme: {
     extend: {
@@ -17,7 +18,8 @@ const config: Config = {
         foreground: "var(--foreground)",
         "primary": "#131213",
         "secondary": "#1f1e1f",
-        "text-primary": "#fdf3f9"
+        "text-primary": "#fdf3f9",
+        "text-secondary": "#FDF3F9"
 
       },
       transitionTimingFunction: {

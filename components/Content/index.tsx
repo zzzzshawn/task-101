@@ -18,12 +18,11 @@ const Content = () => {
 const Seperator = () => {
   return (
     <>
-      <div className="absolute z-50 top-[15%] text-text-primary bg-primary text-xl font-bold tracking-wider text-[60px] p-5">
-        TEAM
+      <div className="absolute z-30 top-[15%] text-text-primary bg-primary text-xl font-bold tracking-wider  py-8">
+        <h1 className="text-[60px]">TEAM</h1>
       </div>
       <div
-        className="w-px h-screen absolute bg-white/20"
-        aria-hidden="true"
+        className="w-[1px] h-screen absolute bg-white/20"
       ></div>
     </>
   );
