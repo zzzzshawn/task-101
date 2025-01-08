@@ -46,7 +46,7 @@ export const founders = [
     linkedIn: "/",
     imageUrl: "/assets/fund3.png",
     banner: "/assets/banner3.png",
-    classname: "bottom-[16%] left-[10%]",
+    classname: "bottom-[16%] left-[10%] max-sm:bottom-[2%] z-[40]",
     classInv: "bottom-[9%] left-[9%]"
   },
   {
@@ -57,8 +57,8 @@ export const founders = [
     linkedIn: "/",
     imageUrl: "/assets/fund2.png",
     banner: "/assets/banner1.png",
-    classname: "bottom-[9%] right-[9%]",
-    classInv: "bottom-[16%] right-[10%]"
+    classname: "bottom-[9%] right-[9%] max-sm:-bottom-[2%] z-[40]",
+    classInv: "bottom-[16%] right-[10%]  "
   }
 ]
 
@@ -72,7 +72,7 @@ export const founders2 = [
     imageUrl: "/assets/founder1.jpg",
     banner: "/assets/fbanner1.jpg",
     classname: "top-[9%] left-[10%]",
-    classInv: "top-[17%] left-[10%]"
+    classInv: "top-[17%] left-[10%] max-sm:top-[12%]"
   },
   {
     name: "DEADPOOL",
@@ -83,7 +83,7 @@ export const founders2 = [
     imageUrl: "/assets/founder2.jpg",
     banner: "/assets/fbanner2.jpg",
     classname: "top-[17%] right-[10%]",
-    classInv: "top-[9%] right-[10%]"
+    classInv: "top-[9%] right-[10%] max-sm:top-[5%]"
   },
   {
     name: "GHOST",
@@ -94,7 +94,7 @@ export const founders2 = [
     imageUrl: "/assets/founder3.jpg",
     banner: "/assets/fbanner3.png",
     classname: "bottom-[16%] left-[10%]",
-    classInv: "bottom-[9%] left-[9%]"
+    classInv: "bottom-[9%] left-[9%] max-sm:-bottom-[2%]"
   },
   {
     name: "CHILL DUDE",
@@ -105,7 +105,7 @@ export const founders2 = [
     imageUrl: "/assets/founder4.png",
     banner: "/assets/founder4.png",
     classname: "bottom-[9%] right-[9%]",
-    classInv: "bottom-[16%] right-[10%]"
+    classInv: "bottom-[16%] right-[10%] max-sm:bottom-[2%]"
   }
 ]
 

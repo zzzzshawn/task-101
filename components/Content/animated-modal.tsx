@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { AnimatePresence, easeOut, motion } from "framer-motion";
+import { AnimatePresence,  motion } from "framer-motion";
 import React, {
   ReactNode,
   createContext,
@@ -68,6 +68,7 @@ export const ModalBody = ({
     className?: string;
   }) => {
     const { open } = useModal();
+
   
     useEffect(() => {
       if (open) {
@@ -102,7 +103,7 @@ export const ModalBody = ({
               exit={{
                 opacity: 0,
               }}
-              className="absolute inset-0 flex items-center justify-center z-50"
+              className="absolute max-sm:fixed inset-0 max-sm:px-2 flex items-center justify-center z-50"
             >
               <motion.div
                 ref={modalRef}
@@ -112,7 +113,7 @@ export const ModalBody = ({
                 )}
                 initial={{
                   opacity: 1,
-                  y: 700,
+                  y:700,
                 }}
                 animate={{
                   opacity: 1,
