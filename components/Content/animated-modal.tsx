@@ -89,7 +89,7 @@ export const ModalBody = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black bg-opacity-60 z-50"
+              className="fixed inset-0 bg-black/60 z-50"
             ></motion.div>
   
             <motion.div
@@ -107,7 +107,7 @@ export const ModalBody = ({
               <motion.div
                 ref={modalRef}
                 className={cn(
-                  "h-[578px] w-[458px] rounded-sm relative z-50 flex flex-col flex-1 overflow-hidden",
+                  "h-[578px] w-[458px] rounded-[0.2rem] relative z-50 flex flex-col flex-1 overflow-hidden",
                   className
                 )}
                 initial={{
@@ -119,12 +119,11 @@ export const ModalBody = ({
                   y: 0,
                 }}
                 transition={{
-                  duration: 0.5,
+                  duration: 0.7,
                   delay: 0.1,
-                  ease: [.47,.17,0,.99]
+                  ease: [.42,.23,0,.95]
                 }}
               >
-                {/* <CloseIcon /> */}
                 {children}
               </motion.div>
             </motion.div>

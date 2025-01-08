@@ -26,7 +26,7 @@ const Card = ({ founder }: FounderProps) => {
         alt="image"
         width={1024}
         height={1024}
-        className="w-[410px] h-[246px] rounded-md"
+        className="w-[410px] h-[246px] object-cover rounded-md"
       />
       <div className="flex flex-col justify-between h-[260px]">
         <div className="">
