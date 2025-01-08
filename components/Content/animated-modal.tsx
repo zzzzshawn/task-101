@@ -121,7 +121,7 @@ export const ModalBody = ({
                 transition={{
                   duration: 0.7,
                   delay: 0.1,
-                  ease: [.42,.23,0,.95]
+                  ease: [.41,.25,0,.95]
                 }}
               >
                 {children}
