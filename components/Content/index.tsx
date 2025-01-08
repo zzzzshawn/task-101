@@ -1,13 +1,13 @@
 import React from "react";
 import Founderbox from "../FounderBox";
-import { founderContent1, founderContent2 } from "@/constants";
+import { founderContent1, founderContent2, founders, founders2 } from "@/constants";
 
 const Content = () => {
   return (
     <div className="relative w-full h-screen flex justify-center items-center">
       <div className="w-full h-[600px] absolute top-[24%]  flex justify-between">
-        <Founderbox content={founderContent1} />
-        <Founderbox content={founderContent2} inverse />
+        <Founderbox content={founderContent1} founders={founders} />
+        <Founderbox content={founderContent2} founders={founders2} inverse />
       </div>
       <Seperator />
 

@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React from "react";
-import { founders } from "@/constants";
 import {
   Modal,
   ModalBody,
@@ -17,9 +16,20 @@ type FounderProps = {
     head2: string;
   };
   inverse?: boolean;
+  founders: {
+    name: string;
+    position: string;
+    desc: string;
+    tags: string[];
+    linkedIn: string;
+    imageUrl: string;
+    banner: string;
+    classname: string;
+    classInv: string;
+  }[];
 };
 
-const Founderbox = ({ content, inverse }: FounderProps) => {
+const Founderbox = ({ content, inverse, founders }: FounderProps) => {
   return (
     <div className="w-[50%] relative p-5 flex items-center justify-center group">
       <div className="relative size-[600px]  flex items-center justify-center ">
@@ -31,14 +41,16 @@ const Founderbox = ({ content, inverse }: FounderProps) => {
                 inverse ? founder.classInv : founder.classname
               )}
             >
+              <div className="rounded-md overflow-hidden w-full h-full">
               <Image
                 key={idx}
                 src={founder.imageUrl}
                 alt="image"
                 width={1024}
                 height={1024}
-                className=""
+                className="object-cover size-full"
               />
+              </div>
             </ModalTrigger>
             <ModalBody className="p-[24px] max-w-[460px] bg-secondary">
               <ModalContent>
